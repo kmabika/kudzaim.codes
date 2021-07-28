@@ -44,10 +44,6 @@ export default class MyDocument extends Document<DocProps> {
       <Html lang="en">
         <Head>
           <meta property="og:type" content="website" />
-          <meta name="twitter:account_id" property="twitter:account_id" content="717185162" />
-          <meta name="twitter:site" content="@iamjuandis" />
-          <meta name="twitter:creator" content="@iamjuandis" />
-          {/* <link rel="stylesheet" href="https://use.typekit.net/lmz3qmg.css" /> */}
           <link rel="stylesheet" href="https://use.typekit.net/zyk6vpa.css"/>
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
