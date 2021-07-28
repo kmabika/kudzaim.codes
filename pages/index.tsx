@@ -2,11 +2,9 @@ import { GetStaticProps } from 'next';
 import PageLayout from 'layout/PageLayout'
 import {MetaInfoProps, HeroBannerType, ProjectsType, BlogPostsType} from "types/interfaces";
 import {META_INFO, HERO_BANNER_TEXTS} from "assets/content";
-import getAllProjects from 'lib/getProjects';
-import getAllBlogPosts from 'lib/getBlogPosts';
+import getAllProjects from 'graphql/getProjects';
 import Hero from "components/Hero";
 import ProjectsBanner from "components/Projects";
-import PostsBanner from 'components/Posts';
 
 interface Props{
     metaInfo: MetaInfoProps;
@@ -16,7 +14,7 @@ interface Props{
 }
 
 
-const HomePage = ({metaInfo, heroTexts, projects, blogPosts} : Props) => {
+const HomePage = ({metaInfo, heroTexts, projects} : Props) => {
   return (
     <PageLayout
     image={metaInfo?.previewImage}
@@ -24,7 +22,6 @@ const HomePage = ({metaInfo, heroTexts, projects, blogPosts} : Props) => {
     description={metaInfo?.description}>
     <Hero headline={heroTexts?.headline} paragraph={heroTexts?.paragraph} />
     <ProjectsBanner projects={projects}/>
-    {/* <PostsBanner posts={blogPosts}/> */}
     </PageLayout>
   )
 }
@@ -32,13 +29,11 @@ const HomePage = ({metaInfo, heroTexts, projects, blogPosts} : Props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const {projects} = await getAllProjects();
-  const {blogPosts} = await getAllBlogPosts();
   return {
     props: {
       metaInfo: META_INFO,
       heroTexts: HERO_BANNER_TEXTS,
       projects,
-      blogPosts,
     },
   };
 };
