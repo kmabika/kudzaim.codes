@@ -25,9 +25,7 @@ const Footer = ({ mainColor = COLOUR.blue_universe }: FooterProps) => {
         <FooterTextContent>
           <Paragraph
             highlightColor={mainColor}
-            children={`<a href="mailto:kdmab10@gmail.com" title="kdmab10@gmail.com" target="_blank" rel="noopener noreferrer">
-              kdmab10@gmail.com
-            </a>`}
+            children={`<a href="mailto:kdmab10@gmail.com" title="kdmab10@gmail.com" target="_blank" rel="noopener noreferrer">kdmab10@gmail.com</a>`}
           />
         <SocialContainer>
             <SocialIcons href="https://bit.ly/2TlC1kI" target="_blank" rel="noopener noreferrer">
