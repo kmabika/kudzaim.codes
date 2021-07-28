@@ -1,17 +1,17 @@
 import graphcmsClient,{gql} from "./graphcms-client";
-import { BlogPostCardFragment } from "./graphql-fragments";
+import { ArticleCardFragment } from "./graphql-fragments";
 
-export const getAllBlogPostsQuery = gql`
+export const getAllArticlesQuery = gql`
     {
         blogPosts {
             ...BlogPostCardFragment
         }
     }
-    ${[BlogPostCardFragment]}
+    ${[ArticleCardFragment]}
 `;
 
 async function getAllBlogPosts() {
-    const  { blogPosts } = await graphcmsClient.request(getAllBlogPostsQuery);
+    const  { blogPosts } = await graphcmsClient.request(getAllArticlesQuery);
     return {
         blogPosts
     }

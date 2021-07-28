@@ -1,4 +1,4 @@
-import {gql} from "lib/graphcms-client";
+import {gql} from "graphql/graphcms-client";
 
 export const ProjectCardFragment = gql`
 fragment ProjectCardFragment on Project{
@@ -14,7 +14,7 @@ fragment ProjectCardFragment on Project{
   }
 `;
 
-export const BlogPostCardFragment = gql`
+export const ArticleCardFragment = gql`
   fragment BlogPostCardFragment on BlogPost{
     id
     excerpt
