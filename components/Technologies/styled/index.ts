@@ -1,13 +1,60 @@
 import styled from 'styled-components'
 import COLOUR from "styles";
 
+
+export const SkillsWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 100px 48px 0 ;
+  margin: 0 auto;
+  max-width: 1040px;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 48px 0;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 50px 16px 0 ;
+
+    width: calc(100vw - 32px);
+    flex-direction: column;
+  }
+`;
+
+
+export const SkillsTitle = styled.p`
+  max-width: 800px;
+  font-size: 1em;
+  line-height: 40px;
+  font-weight: 300;
+  padding-bottom: 3.6rem;
+  color: ${(props) => (props.color ? props.color : props.theme.text)};
+
+  @media screen and (max-width: 768px) {
+    max-width: 670px;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+`
+
 export const Icons = styled.a`
   transition: 0.3s ease;
   color: ${(props) => (props.color ? props.color : props.theme.text)};
   border-radius: 50px;
   padding: 8px;
   cursor: crosshair;
- 
 `;
 
 export const ImageContainer = styled.div`

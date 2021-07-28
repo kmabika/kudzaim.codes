@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { HeadTagProps } from "types/interfaces";
+import useDarkMode from "use-dark-mode";
 
 const HeadTags = ({ title, image, description, locale, currentUrl, mainColor }: HeadTagProps) => {
+  const darkMode = useDarkMode();
   return (
     <Head>
       <meta name="apple-mobile-web-app-title" content={title ?? 'Kudzai Mabika • Portfolio'} />
@@ -39,12 +41,12 @@ const HeadTags = ({ title, image, description, locale, currentUrl, mainColor }: 
       />
       <link
         rel="shortcut icon"
-        href={`/images/favicon/favicon.png`}
+        href={`/images/favicon/favicon-${darkMode.value ? 'dark' : 'light'}.png`}
       />
       <link
         rel="icon"
         sizes="192x192"
-        href={`/images/favicon/favicon.png`}
+        href={`/images/favicon/favicon-${ darkMode.value ? 'dark' : 'light'}.png`}
       />
     </Head>
   )

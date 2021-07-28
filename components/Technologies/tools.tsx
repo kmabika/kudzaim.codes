@@ -1,17 +1,18 @@
 import React from "react";
 import { SiGit, SiGraphql, SiMysql, SiJest, SiPostgresql} from "react-icons/si";
-import { List, ListContainer, ListItem, ListParagraph, ListTitle, HeadlineWrapper,Icons} from "./styled";
-import { Section, SectionDivider, SectionText, SectionTitle } from "components/GlobalComponents";
+import { List, ListContainer, ListItem, ListParagraph, ListTitle, HeadlineWrapper,Icons, SkillsWrapper, SkillsTitle} from "./styled";
 import Headline from "components/Headline";
+
+
 const Tools = () => (
-    <Section id="tech">
+    <SkillsWrapper>
       <HeadlineWrapper>
         <Headline typeHeadline="h2">Tools</Headline>
       </HeadlineWrapper>
-      <SectionText>
+      <SkillsTitle>
         I've worked with a range a technologies in the web development world. From
         Back-end To Design.
-      </SectionText>
+      </SkillsTitle>
       <List>
         <ListItem>
           <Icons>
@@ -72,7 +73,7 @@ const Tools = () => (
             </ListContainer>
         </ListItem>
       </List>
-    </Section>
+    </SkillsWrapper>
   );
 
   export default Tools;

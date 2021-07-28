@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react';
-import {FaDev, FaGithub, FaLinkedin} from 'react-icons/fa'
+import {FaGithub, FaLinkedin} from 'react-icons/fa'
 import COLOUR from 'styles';
 import Headline from 'components/Headline';
 import useDarkMode from 'use-dark-mode';
@@ -35,9 +35,6 @@ const Footer = ({ mainColor = COLOUR.blue_universe }: FooterProps) => {
             </SocialIcons>
             <SocialIcons href="https://bit.ly/3iyK3zl" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size="1.5rem" />
-            </SocialIcons>
-            <SocialIcons>
-              <FaDev size="1.5rem"/>
             </SocialIcons>
           </SocialContainer>    
             <Paragraph
