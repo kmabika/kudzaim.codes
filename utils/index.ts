@@ -1,0 +1,70 @@
+export const scrollToElement = (id: any) => {
+    if(typeof window !== 'undefined' && typeof document !== 'undefined'){
+        const yOffSet = -50;
+        const element = document.getElementById(id);
+        const yPos = (element?.getBoundingClientRect()?.top ?? 0) + window.pageYOffset + yOffSet;
+        return window.scrollTo({top: yPos, behavior: 'smooth'})
+    }
+} 
+
+const months: string[] = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
+export const formatDate = (dateString: string) =>{
+    const date = new Date(dateString);
+    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
+
+export const handleGridRangeProject = (length: number, position: number) => {
+    switch (true) {
+      case length === 1:
+        return [1, -1, 'large'];
+      case length > 1 && position === 0:
+        return [1, 6, 'small'];
+      case length > 1 && position === 1:
+        return [6, -1, 'big'];
+      case length === 3 && position === 2:
+        return [1, -1, 'large'];
+      case length === 4 && position === 2:
+        return [1, 8, 'big'];
+      case length === 4 && position === 3:
+        return [8, -1, 'small'];
+      case length > 4 && position === 2:
+        return [1, -1, 'large'];
+      case length > 4 && position === 3:
+        return [1, 8, 'big'];
+      case length > 4 && position === 4:
+        return [8, -1, 'small'];
+      default:
+        return [1, -1, 'large'];
+    }
+  };
+
+export function calculateAge(currentDate = new Date()): number {
+    const birthDate = new Date('1998-09-01')
+  
+    let age = currentDate.getFullYear() - birthDate.getFullYear()
+  
+    if (
+      currentDate.getMonth() < birthDate.getMonth() ||
+      (currentDate.getMonth() === birthDate.getMonth() &&
+        currentDate.getDate() < birthDate.getDate())
+    ) {
+      age = age - 1
+    }
+  
+    return age
+  }
+  
