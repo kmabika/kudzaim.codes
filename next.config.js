@@ -12,7 +12,7 @@ module.exports = {
       {
         source: '/resume',
         destination:
-          'https://bit.ly/3yXp9jF',
+          'https://bit.ly/3rSOkSt',
         permanent: true,
       },
       {
