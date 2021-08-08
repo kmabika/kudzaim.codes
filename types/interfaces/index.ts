@@ -75,27 +75,31 @@ export interface HeroBannerType{
     paragraph: string;
     secondHeadline?: string;
     secondParagraph?: string;
-}
-
-export type Asset = {
-    url: string;
+    mainColor?: string;
+    profileImage?: string;
 }
 
 export interface ProjectMainType{
     client: string;
     headline: string;
     mainColor: string;
-    cardImages: Asset[];
+    coverImage: ImageInterface;
+    cardImages: ImageInterface[];
+    previewImage: ImageInterface;
     skills: string[];
     slug: string;
+    firstYear?: number;
+    lastYear?:string;
     years?: YearsTypes;
+    sliderImages: ImageInterface[];
+    smallImages?: ImageInterface[];
 }
 
 export interface BlogPostMainType {
     mainColor: string;
     title: string;
     excerpt: string;
-    cardImages: Asset[];
+    cardImages: ImageInterface[];
     tags: string[];
     slug: string;
 }
@@ -103,7 +107,7 @@ export interface BlogPostMainType {
 export interface ImageInterface {
     height: number;
     priority?: boolean;
-    src: string;
+    url: string;
     width: number;
 }
 
@@ -126,6 +130,7 @@ export interface ProjectSectionType {
     marginBottom?: boolean;
     maxWidth?: number;
     title?: string;
+    content?: string;
 }
 
 export interface SectionsType{
@@ -135,8 +140,9 @@ export interface SectionsType{
 export interface ProjectInternalInfoTypes{
     myRole: string;
     overview: string;
-    conclusion: ProjectSectionType;
-    sections: SectionsType;
+    projectLink?: string;
+    conclusion?: ProjectSectionType;
+    sections?: SectionsType;
 }
 
 export interface YearsTypes{

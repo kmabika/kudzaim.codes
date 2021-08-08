@@ -37,8 +37,9 @@ const Footer = ({ mainColor = COLOUR.blue_universe }: FooterProps) => {
           </SocialContainer>    
             <Paragraph
               highlightColor={mainColor}
-              children={`<a href="https://github.com/kmabika/kmabika.github.io" target="_blank" rel="noopener noreferrer" >🍴 GitHub Repository.</a>`}
+              children={`<p> View <a href="https://github.com/kmabika/kmabika.github.io" target="_blank" rel="noopener noreferrer" > Source </a> on GitHub </p>`}
             />
+            
         </FooterTextContent>
       </FooterContent>
       <ThemeButton callback={() => darkmode.toggle()} darkMode={onDarkMode}/>

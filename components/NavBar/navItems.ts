@@ -39,7 +39,7 @@ export const NavItems: NavBarItemType[] = [
     {
       label: 'Resume',
       type: 'link',
-      route: '/resume',
+      route: '/resume/resume.pdf',
       isExternal: true,    },
 
   ];

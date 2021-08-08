@@ -23,13 +23,13 @@ export const HeadlineHeroBanner = styled.div`
     width: 100%;
     .color {
         font-size: 1em;
-        font-family: 'gilbert', sans-serif;
+        font-family: 'quicksand', sans-serif;
         transition: all ease 0.3s;
         position: relative;
         &::after {
             bottom: 0;
             content: ' ';
-            background: linear-gradient(90deg, #454B1B	 25%, #088 50%, #000 75%, #454B1B	 100%);
+            background: linear-gradient(90deg, #006400	 25%, #fd0 50%, #fd0 50%, #d00 75%, #006400	 100%);
             background-size: 200% auto;
             height: 3px;
             left: 0;
@@ -73,6 +73,45 @@ export const HeroParagraphsWrapper = styled.div`
     padding-top: 60px;
     padding-bottom: 20px;
     width: 100%;
+    .color {
+        font-size: 1em;
+        font-family: 'quicksand', sans-serif;
+        transition: all ease 0.3s;
+        position: relative;
+        &::after {
+            bottom: 0;
+            content: ' ';
+            background: linear-gradient(90deg, #006400	 25%, #fd0 50%, #fd0 50%, #d00 75%, #006400	 100%);
+            background-size: 200% auto;
+            height: 3px;
+            left: 0;
+            margin: auto;
+            width: 0%;
+            opacity: 0;
+            position: absolute;
+            transition: all ease 0.3s;
+            animation: shine 1s linear infinite;
+        }
+    }
+    &:hover {
+        .color {
+            &::after {
+                opacity: 1;
+                transition: all ease 0.3s;
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .color {
+            &::after {
+                height: 2px;
+                opacity: 1;
+                transition: all ease 0.3s;
+                width: 100%;
+            }
+        }
+    }
     @media screen and (max-width: 700px){
         grid-column: 1 / -1;
         grid-template-columns: 1fr;

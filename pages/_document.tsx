@@ -1,17 +1,16 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-// import { GA_TRACKING_ID } from '../lib/gtag';
 
 interface DocProps {
   isProduction?: any;
 }
+
 export default class MyDocument extends Document<DocProps> {
   static async getInitialProps(ctx: any) {
     const styledComponentsSheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
-    // Check if in production
     const isProduction = process.env.NODE_ENV === 'production';
 
     try {
@@ -47,24 +46,6 @@ export default class MyDocument extends Document<DocProps> {
           <link rel="stylesheet" href="https://use.typekit.net/zyk6vpa.css"/>
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
-          {/* {isProduction && (
-            <Fragment>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', '${GA_TRACKING_ID}', {
-                      page_path: window.location.pathname,
-                    });
-                  `,
-                }}
-              />
-            </Fragment>
-          )} */}
         </Head>
         <body>
           <Main />

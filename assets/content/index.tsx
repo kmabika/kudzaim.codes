@@ -10,9 +10,9 @@ export const META_INFO: MetaInfoProps = {
   };
 
 export const HERO_BANNER_TEXTS: HeroBannerType = {
-  headline: `Hey there, I'm <span class="color">Kudzai</span> 👋`,
-  paragraph: `I'm an aspiring full stack developer who has recently graduated from  <a class="external-link" rel="noopener noreferrer" href="https://www.monash.edu/" target="_blank" title="Monash University">Monash University</a>
-  with a Bachelor of Computer Science. I'm passionate about creating interactive applications and experiences on the web.`,
+  headline: `Hey there, I'm Kudzai 👋`,
+  paragraph: `I'm a Bachelor of Computer and Information Science Graduate from  <a class="external-link" rel="noopener noreferrer" href="https://www.monash.edu/" target="_blank" title="Monash University">Monash University</a> interested in software development, 
+  with a passion for both frontend and backend applications. I freelance in my spare time to help clients ship quality web applications.`,
 };
 
 export const ABOUT_BANNER_TEXTS:HeroBannerType = {

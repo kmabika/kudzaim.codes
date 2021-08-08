@@ -9,12 +9,12 @@ module.exports = {
   },
   async redirects() {
     return [
-      {
-        source: '/resume',
-        destination:
-          'https://bit.ly/3rSOkSt',
-        permanent: true,
-      },
+      // {
+      //   source: '/resume',
+      //   destination:
+      //     'https://bit.ly/3rSOkSt',
+      //   permanent: true,
+      // },
       {
         source: '/in',
         destination: 'https://bit.ly/3iyK3zl',

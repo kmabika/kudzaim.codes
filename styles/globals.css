@@ -1,8 +1,8 @@
 * {
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
-  font-family: 'gilbert', sans-serif;
-  font-weight: 700;
+  font-family: 'quicksand', sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 20px;
   font-display: swap;

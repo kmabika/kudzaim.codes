@@ -66,5 +66,42 @@ export function calculateAge(currentDate = new Date()): number {
     }
   
     return age
+};
+
+export const HandleAlignment = (alignment: string) => {
+  const splitAlignment: string[] = alignment.split('-');
+  const size: string = splitAlignment[0];
+  const position: string = splitAlignment[1];
+
+  switch (size) {
+    case 'wide':
+      return {
+        maxWidth: '1200px',
+        gridTemplate: position === 'left' || position === 'right' ? 'repeat(14, 1fr)' : '1fr',
+        direction: position === 'up' || position === 'right' ? 'ltr' : 'rtl',
+        size: size,
+        position: position,
+        gridColumnText: position === 'left' ? '7 / 11' : position === 'right' ? '3 / 7' : '1 / -1',
+        gridColumnImage: position === 'left' ? '1 / 7' : position === 'right' ? '7 / -1' : '1 / -1',
+      };
+
+    case 'mid':
+      return {
+        maxWidth: '1024px',
+        gridTemplate: position === 'left' || position === 'right' ? 'repeat(12, 1fr)' : '1fr',
+        direction: position === 'up' || position === 'right' ? 'ltr' : 'rtl',
+        size: size,
+        position: position,
+        gridColumnText: position === 'left' ? '7 / -1' : position === 'right' ? '1 / 7' : '1 / -1',
+        gridColumnImage: position === 'left' ? '1 / 7' : position === 'right' ? '7 / -1' : '1 / -1',
+      };
+
+    default:
+      return {
+        maxWidth: '1200px',
+        gridTemplate: 'repeat(14, 1fr)',
+        direction: 'rtl',
+      };
   }
+};
   

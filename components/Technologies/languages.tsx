@@ -17,6 +17,9 @@ const ProgrammingLanguages = () => (
           </Icons>
           <ListContainer>
             <ListTitle>TypeScript</ListTitle>
+            <ListParagraph>
+              Familiar with
+            </ListParagraph>
           </ListContainer>
         </ListItem>
         <ListItem>
@@ -47,6 +50,9 @@ const ProgrammingLanguages = () => (
           </Icons>
           <ListContainer>
             <ListTitle>PHP 8</ListTitle>
+            <ListParagraph>
+              Basic understanding of PHP concepts.
+            </ListParagraph>
           </ListContainer>
         </ListItem>
       </List>
