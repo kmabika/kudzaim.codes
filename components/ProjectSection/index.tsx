@@ -28,7 +28,7 @@ const ProjectSection = ({
             HandleAlignment(`${alignment}`).position === 'up') && (
             <ProjectSectionImage alignment={alignment}>
               <Image
-                src={image.url}
+                src={image.url as any}
                 width={image.width}
                 height={image.height}
                 objectFit="cover"
@@ -52,7 +52,7 @@ const ProjectSection = ({
             HandleAlignment(`${alignment}`).position === 'bottom') && (
             <ProjectSectionImage alignment={alignment}>
               <Image
-                src={image.url}
+                src={image.url as any}
                 width={image.width}
                 height={image.height}
                 objectFit="cover"

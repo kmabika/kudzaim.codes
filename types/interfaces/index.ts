@@ -23,6 +23,14 @@ export interface HeaderTypes{
     isOpen?: boolean;
 }
 
+
+export interface ImageInterface {
+    height?: number;
+    url: string;
+    width?: number;
+    priority?: boolean;
+}
+
 export interface NavBarItemType{
     icon?: any;
     label?: string;
@@ -83,15 +91,15 @@ export interface ProjectMainType{
     client: string;
     headline: string;
     mainColor: string;
-    coverImage: ImageInterface;
+    coverImage?: ImageInterface;
     cardImages: ImageInterface[];
-    previewImage: ImageInterface;
+    previewImage?: ImageInterface;
     skills: string[];
     slug: string;
     firstYear?: number;
     lastYear?:string;
     years?: YearsTypes;
-    sliderImages: ImageInterface[];
+    sliderImages?: ImageInterface[];
     smallImages?: ImageInterface[];
 }
 
@@ -104,12 +112,6 @@ export interface BlogPostMainType {
     slug: string;
 }
 
-export interface ImageInterface {
-    height: number;
-    priority?: boolean;
-    url: string;
-    width: number;
-}
 
 type AlignementTypes =
   | 'wide-up'

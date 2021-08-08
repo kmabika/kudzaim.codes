@@ -49,7 +49,7 @@ import {
         description={project.headline}
         locale={`${router.locale}`}
         currentUrl={currentURL}
-        image={project.previewImage?.url}
+        image={project.previewImage?.url!}
         mainColor={project.mainColor}
       />
       <NavBar bgColor={project.mainColor} />
@@ -70,7 +70,7 @@ import {
               <br/>
           </ProjectLayoutMainBannerTextContainer>
           <ProjectLayoutCoverImageContainer>
-          <img src={project.coverImage.url} alt={project.client} />
+          <img src={project.coverImage?.url!} alt={project.client} />
           </ProjectLayoutCoverImageContainer>
         </ProjectLayoutMainBannerContent>
       </ProjectLayoutMainBanner>
@@ -89,7 +89,7 @@ import {
 
       <ProjectSliderContainer>
         <ProjectSliderContent>
-          <Slider mainColor={project.mainColor} slides={project.sliderImages} />
+          <Slider mainColor={project.mainColor} slides={project?.sliderImages!} />
         </ProjectSliderContent>
       </ProjectSliderContainer>
           

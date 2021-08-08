@@ -8,16 +8,13 @@ import {
   ContainerArrows,
   SliderNumbers,
 } from './styled';
-// import Dots from 'components/SliderDots';
 import Arrow from 'components/SliderArrows';
 import SlideImage from 'components/SliderImage';
+import { ImageInterface } from 'types/interfaces';
 
-type Asset = {
-  url: string;
-}
 
 interface SliderProps {
-  slides: Asset[];
+  slides: ImageInterface[];
   showArrows?: boolean;
   showFooter?: boolean;
   mainColor?: string;
