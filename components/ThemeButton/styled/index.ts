@@ -7,7 +7,7 @@ export const ButtonThemeContainer = styled.div`
   box-sizing: border-box;
   bottom: 30px;
   color: ${(props) => props.theme.text};
-  cursor: pointer;
+  cursor: none;
   display: flex;
   height: 40px;
   justify-content: center;

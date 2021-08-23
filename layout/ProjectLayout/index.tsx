@@ -23,6 +23,7 @@ import {
     ProjectSliderContent,
   } from './styled';
   import ProjectSection from 'components/ProjectSection';
+import { truncate } from 'fs';
 
   interface Props {
     metaInfo: MetaInfoProps;
@@ -62,7 +63,8 @@ import {
               {project.headline}
             </Headline>
             <br />
-             { project.projectLink && <Paragraph
+             { project.projectLink && 
+             <Paragraph
                 color={COLOUR.white_cloud}
                 highlightColor={COLOUR.white_dark}
                 children={`<a href="${project.projectLink}" target="_blank" rel="noopener noreferrer" > View Website > </a>`}
@@ -104,6 +106,7 @@ import {
       {project.sections &&
         Object.entries(project.sections)?.map(
           ([key, section]: [string, ProjectSectionType], index: number) => {
+            console.log(section.marginBottom)
             return (
               <ProjectSection
                 alignment={section.alignment}
@@ -112,7 +115,7 @@ import {
                 image={section.image}
                 key={`${key}-${index}`}
                 mainColor={project.mainColor}
-                marginBottom={true}
+                marginBottom={section.marginBottom}
                 title={section.title}
               />
             );
@@ -125,7 +128,7 @@ import {
           image={project.conclusion?.image}
           title={'Conclusion'}
           content={project.conclusion?.content}
-          columns={2}
+          columns={1}
           mainColor={project.mainColor}
         />
       )}
@@ -136,7 +139,7 @@ import {
           size={0.9}
           children={`© ${
             project?.firstYear !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
-          }${new Date()?.getFullYear()}. All rights reserved.`}
+          }${new Date()?.getFullYear()}.All rights reserved - ${project.client}.`}
         />
       </ProjectFooter>
       <Footer mainColor={project.mainColor} />

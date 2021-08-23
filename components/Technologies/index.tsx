@@ -1,7 +1,8 @@
 import React from "react";
 import { SiReact,SiLaravel, SiNextDotJs, SiGatsby} from "react-icons/si";
-import { HeadlineWrapper, List, ListContainer, ListItem, SkillsWrapper, SkillsTitle,ListTitle,Icons } from "./styled";
+import { HeadlineWrapper, List, ListContainer, ListItem, SkillsWrapper, SkillsTitle,ListTitle,Icons, ListParagraph } from "./styled";
 import Headline from "components/Headline";
+import {Icon} from '@iconify/react';
 
 const Technologies = () => (
   <SkillsWrapper>
@@ -14,7 +15,7 @@ const Technologies = () => (
         <List>
           <ListItem>
             <Icons>
-              <SiReact size="3rem" />
+            <Icon icon="logos:react" height="48" />
             </Icons>
             <ListContainer>
               <ListTitle>React</ListTitle>
@@ -22,15 +23,18 @@ const Technologies = () => (
           </ListItem>
           <ListItem>
             <Icons>
-              <SiLaravel size="3rem" />
+            <Icon icon="logos:laravel" height="48" />
             </Icons>
             <ListContainer>
               <ListTitle>Laravel 8</ListTitle>
+              <ListParagraph>
+                Currently Learning Laravel 8.
+              </ListParagraph>
             </ListContainer>
           </ListItem>
           <ListItem>
             <Icons>
-              <SiNextDotJs size="3rem" />
+            <Icon icon="file-icons:nextjs" height="48" />
             </Icons>
             <ListContainer>
               <ListTitle>Next.Js</ListTitle>
@@ -38,7 +42,7 @@ const Technologies = () => (
           </ListItem>
           <ListItem>
             <Icons>
-              <SiGatsby size="3rem" />
+            <Icon icon="logos:gatsby" height="48" />
             </Icons>
             <ListContainer>
               <ListTitle>Gatsby Js</ListTitle>

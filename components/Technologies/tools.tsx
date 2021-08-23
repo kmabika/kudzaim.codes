@@ -1,8 +1,8 @@
 import React from "react";
-import { SiGit, SiGraphql, SiMysql, SiJest, SiPostgresql} from "react-icons/si";
-import { List, ListContainer, ListItem, ListParagraph, ListTitle, HeadlineWrapper,Icons, SkillsWrapper, SkillsTitle} from "./styled";
+import { SiGit, SiGraphql, SiMysql, SiJest} from "react-icons/si";
+import { List, ListContainer, ListItem,ListTitle, HeadlineWrapper,Icons, SkillsWrapper, SkillsTitle, ListParagraph} from "./styled";
 import Headline from "components/Headline";
-
+import { Icon } from '@iconify/react';
 
 const Tools = () => (
     <SkillsWrapper>
@@ -10,66 +10,40 @@ const Tools = () => (
         <Headline typeHeadline="h2">Tools</Headline>
       </HeadlineWrapper>
       <SkillsTitle>
-        I've worked with a range a technologies in the web development world. From
-        Back-end To Design.
+      Here are a few tools I've been using in my programming workflow: 
       </SkillsTitle>
       <List>
         <ListItem>
           <Icons>
-            <SiGit size="3rem" />
+          <Icon icon="cib:git" height="48" />
           </Icons>
           <ListContainer>
-            <ListTitle>Git</ListTitle>
-            <ListParagraph>
-              Experiece with <br />
-              React.js.
-            </ListParagraph>
+            <ListTitle> Git </ListTitle>
           </ListContainer>
         </ListItem>
         <ListItem>
           <Icons>
-            <SiGraphql size="3rem" />
+          <Icon icon="logos:graphql" height="48" />
           </Icons>
           <ListContainer>
             <ListTitle>GraphQL</ListTitle>
-            <ListParagraph>
-              Experience with <br />
-              Node and Databases
-            </ListParagraph>
           </ListContainer>
         </ListItem>
         <ListItem>
           <Icons>
-            <SiMysql size="3rem" />
+          <Icon icon="logos:mysql" height={48}/>
           </Icons>
           <ListContainer>
             <ListTitle>MySQL</ListTitle>
-            <ListParagraph>
-              Experience with <br />
-              tools like Figma
-            </ListParagraph>
           </ListContainer>
         </ListItem>
         <ListItem>
             <Icons>
-                <SiJest size="3rem" />
+            <Icon icon="simple-icons:cypress" height={48} />
             </Icons>
             <ListContainer>
-                <ListTitle>Jest</ListTitle>
-                <ListParagraph>
-                    JavaScript & TypeScript testing with Jest.
-                </ListParagraph>
-            </ListContainer>
-        </ListItem>
-        <ListItem>
-            <Icons>
-                <SiPostgresql size="3rem"/>
-            </Icons>
-            <ListContainer>
-              <ListTitle> PostgreSQL </ListTitle>
-              <ListParagraph>
-                  Experience working with the PostgreSQL
-              </ListParagraph>
+                <ListTitle>Cypress</ListTitle>
+                <ListParagraph>Currently learning E2E testing with cypress.</ListParagraph>
             </ListContainer>
         </ListItem>
       </List>

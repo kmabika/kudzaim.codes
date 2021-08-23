@@ -8,7 +8,7 @@ export const LinkTag = styled.a`
 
 export const Nav = styled.div<NavBarItemType>`
     color: ${COLOUR.blue_universe};
-    cursor: pointer;
+    cursor: none;
     font-size: 0.8rem;
     margin-left: 20px;
     &::after{

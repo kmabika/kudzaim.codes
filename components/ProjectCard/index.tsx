@@ -1,7 +1,9 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import COLOUR from "styles";
 import Headline from "components/Headline";
+import useCursorStyle from 'hooks';
 import Paragraph from "components/Paragraph";
 import { ProjectMainType } from 'types/interfaces';
 import { ProjectCardWrapper, 
@@ -16,6 +18,7 @@ export interface ProjectCardComponentTypes{
     gridRange?: any[];
     background?: string;
     mainColor?: string;
+    onHoverStart?: void;
 }
 
 type ProjectCardType = ProjectMainType & ProjectCardComponentTypes;
@@ -29,9 +32,22 @@ const ProjectCard = ({
     cardImages,
     gridRange,
 }: ProjectCardType) => {
+    const {
+        addCursorBorder,
+        removeCursorBorder,
+      } = useCursorStyle();
+
+      const onMouseEnter = React.useCallback(() => {
+        addCursorBorder();
+      }, [addCursorBorder]);
+
+      const onMouseLeave = React.useCallback(() => {
+        removeCursorBorder();
+      }, [addCursorBorder]);
+
     return(
         <Link href={`projects/${slug}`} passHref>
-            <ProjectCardWrapper title={client} gridRange={gridRange}>
+            <ProjectCardWrapper title={client} gridRange={gridRange} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <ProjectCardCoverWrapper background={mainColor} gridRange={gridRange} >
                     <ProjectCardCoverImage gridRange={gridRange}>
                         <Image

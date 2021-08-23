@@ -2,6 +2,7 @@ import styled from "styled-components";
 import COLOUR from "styles";
 import { ProjectCardComponentTypes } from "..";
 
+
 export const ProjectCardWrapper = styled.a<ProjectCardComponentTypes>`
     display: ${(props) => (props.gridRange && props.gridRange[2] === 'large'? 'grid' : 'flex')};
     flex-direction: column;
@@ -11,7 +12,7 @@ export const ProjectCardWrapper = styled.a<ProjectCardComponentTypes>`
     position: relative;
     width: 100%;
     @media screen and (min-width: 750px) {
-        &:hover {
+        &:hover  {
             transform: scale(1.02);
         }
     }

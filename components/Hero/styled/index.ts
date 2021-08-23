@@ -120,11 +120,3 @@ export const HeroParagraphsWrapper = styled.div`
     }
 `;
 
-export const ScrollImage = styled.div`
-    column-count: 1;
-    column-gap: 30px;
-    img {
-        width: 150px;
-        display: block;
-    }
-`;

@@ -85,7 +85,7 @@ export interface HeroBannerType{
     secondParagraph?: string;
     mainColor?: string;
     profileImage?: string;
-}
+} 
 
 export interface ProjectMainType{
     client: string;
@@ -162,3 +162,28 @@ export interface ProjectsType {
 export interface BlogPostsType {
     [key: string]: BlogPostAllTypes;
 }
+
+export interface ExperienceProps {
+    country: string;
+    company: string;
+    position: string;
+    description: string;
+    years: YearsTypes;
+}
+
+export type Action = 
+{type: 'INITIAL_STATE'} |{type: 'ADD_CURSOR_BORDER'} | {type: 'REMOVE_CURSOR_BORDER'} | {type: 'RESET_CURSOR_COLOR'} | {type: 'LOCK_CURSOR_POSITION', payload: {x : number, y: number}};
+
+
+export type State = {
+  cursorStyle: {
+    bordered: boolean;
+    color: string;
+  },
+  position?: {
+    x: number;
+    y: number;
+  } | null;
+};
+
+export type DispatchActionType = (action: Action) => void;

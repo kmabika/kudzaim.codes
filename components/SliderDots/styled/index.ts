@@ -10,7 +10,7 @@ export const DotComponent = styled.div<DotsStyledProps>`
   border-radius: 50%;
   display: flex;
   margin: 0 10px;
-  cursor: pointer;
+  cursor: none;
   width: ${(props) => (props.active ? '15px' : '10px')};
   height: ${(props) => (props.active ? '15px' : '10px')};
   background: ${(props) =>

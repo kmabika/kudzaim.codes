@@ -12,18 +12,17 @@ export const SkillsWrapper = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
-
   @media screen and (max-width: 768px) {
     padding: 50px 48px 0;
     flex-direction: column;
   }
-
   @media screen and (max-width: 640px) {
     padding: 50px 16px 0 ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
   }
+
 `;
 
 
@@ -31,7 +30,7 @@ export const SkillsTitle = styled.p`
   max-width: 800px;
   font-size: 1em;
   line-height: 40px;
-  font-weight: 300;
+  font-weight: 600;
   padding-bottom: 3.6rem;
   color: ${(props) => (props.color ? props.color : props.theme.text)};
 
@@ -54,7 +53,6 @@ export const Icons = styled.a`
   color: ${(props) => (props.color ? props.color : props.theme.text)};
   border-radius: 50px;
   padding: 8px;
-  cursor: crosshair;
 `;
 
 export const ImageContainer = styled.div`
@@ -139,6 +137,7 @@ export const ListTitle = styled.h4`
 
 export const ListParagraph = styled.p`
   font-size: 0.8em;
+  font-weight: 600;
   line-height: 30px;
   color: ${(props) => (props.color ? props.color : props.theme.text)};
 

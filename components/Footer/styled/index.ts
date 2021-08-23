@@ -40,7 +40,10 @@ export const SocialIcons = styled.a`
   padding: 8px;
   &:hover {
     transform: scale(1.2);
-    cursor: pointer;
+    cursor: none;
+    svg path {
+      fill: ${COLOUR.blue_sky};
+    }
   }
 `;
 

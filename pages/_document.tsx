@@ -35,8 +35,6 @@ export default class MyDocument extends Document<DocProps> {
       styledComponentsSheet.seal();
     }
   }
-
-  /*eslint class-methods-use-this: ["error", { "exceptMethods": ["render"] }] */
   render() {
     const { isProduction } = this.props;
     return (

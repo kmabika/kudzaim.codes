@@ -1,30 +1,28 @@
 import { GetStaticProps } from 'next';
 import PageLayout from 'layout/PageLayout';
-import { MetaInfoProps, HeroBannerType } from 'types/interfaces';
-import { META_INFO, ABOUT_BANNER_TEXTS } from 'assets/content';
+import { MetaInfoProps, HeroBannerType, ExperienceProps } from 'types/interfaces';
+import { META_INFO, ABOUT_BANNER_TEXTS , EXPERIENCES} from 'assets/content';
 import Technologies from 'components/Technologies';
 import ProgrammingLanguages from 'components/Technologies/languages';
 import Tools from 'components/Technologies/tools';
-import Hero from 'components/Hero/aboutHero';
+import HeroBanner from 'components/HeroImage';
+import ExperienceBanner from 'components/ExperienceBanner';
 
 interface Props {
   metaInfo: MetaInfoProps;
   heroTexts: HeroBannerType;
+  experiences: ExperienceProps[]
 }
 
-const HomePage = ({ metaInfo, heroTexts }: Props) => {
+const HomePage = ({ metaInfo, heroTexts, experiences }: Props) => {
   return (
     <PageLayout
       image={metaInfo?.previewImage}
       title={metaInfo?.mainTitle}
       description={metaInfo?.description}
     >
-      <Hero
-        headline={heroTexts?.headline}
-        paragraph={heroTexts?.paragraph}
-        secondHeadline={heroTexts?.secondHeadline}
-        secondParagraph={heroTexts?.secondParagraph}
-      />
+      <HeroBanner heroTexts={heroTexts}/>
+      <ExperienceBanner experiences={experiences} />
       <ProgrammingLanguages />
       <Technologies />
       <Tools />
@@ -37,6 +35,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       metaInfo: META_INFO,
       heroTexts: ABOUT_BANNER_TEXTS,
+      experiences: EXPERIENCES,
     },
   };
 };

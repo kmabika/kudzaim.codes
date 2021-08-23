@@ -45,6 +45,7 @@ export const ProjectInternalFragment = gql`
       alignment
       content
       title
+      marginBottom
       image{
           ...ImageFragment
       }

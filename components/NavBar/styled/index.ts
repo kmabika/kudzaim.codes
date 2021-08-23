@@ -41,7 +41,7 @@ export const HeaderContent = styled.div`
 
 export const LogoWrapper = styled.a<HeaderTypes>`
   flex-direction: row;
-  cursor: pointer;
+  cursor: none;
   display: flex;
   div{
     justify-content: center;

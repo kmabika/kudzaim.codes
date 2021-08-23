@@ -7,7 +7,7 @@ export const ArrowComponent = styled.div<ArrowProps>`
   background: ${COLOUR.white_cloud};
   border-radius: 50%;
   box-shadow: 0px 0px 50px ${(props) => `${props.mainColor}77`};
-  cursor: pointer;
+  cursor: none;
   display: flex;
   ${(props) => (props.direction === 'right' ? `right: 25px` : `left: 25px`)};
   height: 50px;

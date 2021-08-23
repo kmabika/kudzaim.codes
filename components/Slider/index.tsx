@@ -11,7 +11,7 @@ import {
 import Arrow from 'components/SliderArrows';
 import SlideImage from 'components/SliderImage';
 import { ImageInterface } from 'types/interfaces';
-
+import useCursorStyle from 'hooks';
 
 interface SliderProps {
   slides: ImageInterface[];
@@ -40,7 +40,21 @@ const Slider = ({
   const nextSlide = () => {
     setTranslate(translate < 100 - widthSlide ? translate + widthSlide : 100 - widthSlide);
     setActiveSlide(activeSlide < slides?.length - 1 ? activeSlide + 1 : slides?.length - 1);
-  };
+  };  
+
+  const {
+    addCursorBorder,
+    removeCursorBorder,
+  } = useCursorStyle();
+
+  const onMouseEnter = React.useCallback(() => {
+    addCursorBorder();
+  }, [addCursorBorder]);
+
+  const onMouseLeave = React.useCallback(() => {
+    removeCursorBorder();
+  }, [addCursorBorder]);
+
 
   return (
     <SliderComponent marginTop={marginTop}>
@@ -62,12 +76,16 @@ const Slider = ({
               direction="left"
               handleClick={prevSlide}
               opacity={activeSlide !== 0 ? 1 : 0}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
             />
             <Arrow
               mainColor={mainColor}
               direction="right"
               handleClick={nextSlide}
               opacity={activeSlide !== slides.length - 1 ? 1 : 0}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
             />
           </ContainerArrows>
         )}

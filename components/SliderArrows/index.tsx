@@ -7,18 +7,24 @@ export interface ArrowProps {
   direction?: string;
   handleClick?: any;
   opacity?: number;
+  onMouseLeave: any;
+  onMouseEnter: any;
 }
 const Arrow = ({
   mainColor = COLOUR.blue_universe,
   direction,
   handleClick,
   opacity,
-}: ArrowProps) => (
+  onMouseEnter,
+  onMouseLeave,
+}: ArrowProps) =>(
   <ArrowComponent
     onClick={handleClick}
     direction={direction}
     opacity={opacity}
     mainColor={mainColor}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
     {direction === 'right' ? <Icon.FiArrowRight /> : <Icon.FiArrowLeft />}
   </ArrowComponent>
