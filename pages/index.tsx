@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import PageLayout from 'layout/PageLayout'
-import {MetaInfoProps, HeroBannerType, ProjectsType, BlogPostsType} from "types/interfaces";
+import {MetaInfoProps, HeroBannerType, ProjectsType} from "types/interfaces";
 import {META_INFO, HERO_BANNER_TEXTS} from "assets/content";
 import getAllProjects from 'graphql/getProjects';
 import Hero from "components/Hero";
@@ -10,7 +10,6 @@ interface Props{
     metaInfo: MetaInfoProps;
     heroTexts: HeroBannerType;
     projects: ProjectsType;
-    blogPosts: BlogPostsType;
 }
 
 
