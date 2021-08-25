@@ -1,5 +1,4 @@
 import * as React from "react";
-import {GiSun, GiMoonBats} from "react-icons/gi";
 import { ThemeMode } from 'types/interfaces';
 import { ButtonThemeContainer, TextTheme } from './styled';
 import useSound from "use-sound";

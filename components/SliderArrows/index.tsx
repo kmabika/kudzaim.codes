@@ -1,5 +1,5 @@
 import { ArrowComponent } from './styled';
-import * as Icon from 'react-icons/fi';
+import { Icon } from '@iconify/react';
 import COLOUR from 'styles';
 
 export interface ArrowProps {
@@ -26,7 +26,7 @@ const Arrow = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    {direction === 'right' ? <Icon.FiArrowRight /> : <Icon.FiArrowLeft />}
+    {direction === 'right' ? <Icon icon="bytesize:arrow-right" width="35" height="35"/>: <Icon icon="bytesize:arrow-left" width="35" height="35" />}
   </ArrowComponent>
 );
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import {FaGithub, FaLinkedin} from 'react-icons/fa';
 import {Icon} from '@iconify/react';
 import COLOUR from 'styles';
 import Headline from 'components/Headline';

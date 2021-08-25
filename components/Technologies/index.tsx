@@ -1,5 +1,4 @@
 import React from "react";
-import { SiReact,SiLaravel, SiNextDotJs, SiGatsby} from "react-icons/si";
 import { HeadlineWrapper, List, ListContainer, ListItem, SkillsWrapper, SkillsTitle,ListTitle,Icons, ListParagraph } from "./styled";
 import Headline from "components/Headline";
 import {Icon} from '@iconify/react';
