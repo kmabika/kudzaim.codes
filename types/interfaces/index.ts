@@ -103,15 +103,6 @@ export interface ProjectMainType{
     smallImages?: ImageInterface[];
 }
 
-export interface BlogPostMainType {
-    mainColor: string;
-    title: string;
-    excerpt: string;
-    cardImages: ImageInterface[];
-    tags: string[];
-    slug: string;
-}
-
 
 type AlignementTypes =
   | 'wide-up'
@@ -153,14 +144,9 @@ first: string | number;
 }
 
 export type ProjectAllTypes = ProjectMainType & ProjectInternalInfoTypes;
-export type BlogPostAllTypes = BlogPostMainType;
 
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
-}
-
-export interface BlogPostsType {
-    [key: string]: BlogPostAllTypes;
 }
 
 export interface ExperienceProps {

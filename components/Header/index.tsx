@@ -41,12 +41,12 @@ const HeadTags = ({ title, image, description, locale, currentUrl, mainColor }: 
       />
       <link
         rel="shortcut icon"
-        href={`/images/favicon/favicon-light.png`}
+        href={`/images/favicon/favicon-${darkMode.value ? 'dark' : 'light'}.png`}
       />
       <link
         rel="icon"
         sizes="192x192"
-        href={`/images/favicon/favicon-light.png`}
+        href={`/images/favicon/favicon-${darkMode.value ? 'dark' : 'light'}.png`}
       />
     </Head>
   )

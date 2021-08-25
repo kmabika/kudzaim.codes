@@ -45,6 +45,17 @@ const ProgrammingLanguages = () => (
             </ListParagraph>
           </ListContainer>
         </ListItem>
+        <ListItem>
+          <Icons>
+          <Icon icon="file-icons:php" height="48"/>
+          </Icons>
+          <ListContainer>
+            <ListTitle>PHP 8</ListTitle>
+            <ListParagraph>
+              Currently learning PHP 8
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
       </List>
     </SkillsWrapper>
   );

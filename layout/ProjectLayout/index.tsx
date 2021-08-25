@@ -106,7 +106,6 @@ import { truncate } from 'fs';
       {project.sections &&
         Object.entries(project.sections)?.map(
           ([key, section]: [string, ProjectSectionType], index: number) => {
-            console.log(section.marginBottom)
             return (
               <ProjectSection
                 alignment={section.alignment}
