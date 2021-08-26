@@ -9,20 +9,14 @@ module.exports = {
   },
   async redirects() {
     return [
-      // {
-      //   source: '/resume',
-      //   destination:
-      //     'https://bit.ly/3rSOkSt',
-      //   permanent: true,
-      // },
       {
         source: '/in',
-        destination: 'https://bit.ly/3iyK3zl',
+        destination: 'https://l.linklyhq.com/l/aU9a',
         permanent: true,
       },
       {
         source: '/github',
-        destination: 'https://bit.ly/2TlC1kI',
+        destination: 'https://l.linklyhq.com/l/aU9O',
         permanent: true,
       },
     ];

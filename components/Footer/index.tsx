@@ -43,17 +43,17 @@ const Footer = ({ mainColor = COLOUR.blue_universe }: FooterProps) => {
             children={`<a href="mailto:kdmab10@gmail.com" title="kdmab10@gmail.com" target="_blank" rel="noopener noreferrer">kdmab10@gmail.com</a>`}
           />
         <SocialContainer>
-            <SocialIcons onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href="https://bit.ly/2TlC1kI" target="_blank" rel="noopener noreferrer">
+            <SocialIcons onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href="https://l.linklyhq.com/l/aU9O" target="_blank" rel="noopener noreferrer">
             <Icon icon="icon-park-outline:github" height="28" />
             </SocialIcons>
-            <SocialIcons  onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href="https://bit.ly/3iyK3zl" target="_blank" rel="noopener noreferrer">
+            <SocialIcons  onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href="https://l.linklyhq.com/l/aU9a" target="_blank" rel="noopener noreferrer">
             <Icon icon="brandico:linkedin-rect" height="28" />
             </SocialIcons>
           </SocialContainer>    
             <Paragraph
               size={0.9}
               highlightColor={mainColor}
-              children={`<p> Created with ❤️ using NextJs & GraphCMS view <a href="https://github.com/kmabika/kmabika.github.io" target="_blank" rel="noopener noreferrer" > source </a> on GitHub </p>`}
+              children={`<p> Created with ❤️ using NextJs & GraphCMS view <a href="https://l.linklyhq.com/l/aUEo" target="_blank" rel="noopener noreferrer" > source </a> on GitHub </p>`}
             />
         </FooterTextContent>
       </FooterContent>
