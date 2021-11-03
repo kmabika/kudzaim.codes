@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {motion} from 'framer-motion'
 
 export const HeroLayoutWrapper = styled.section`
   background: ${(props) => props.theme.background};
@@ -44,7 +45,7 @@ export const HeroLayoutMainBannerTextContainer = styled.div`
   }
 `;
 
-export const HeroLayoutCoverImageContainer = styled.div`
+export const HeroLayoutCoverImageContainer = styled(motion.div)`
   grid-column: 10 / -2;
   padding-top: 100px;
   position: relative;

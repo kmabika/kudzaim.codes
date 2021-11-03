@@ -1,4 +1,4 @@
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import COLOUR from 'styles';
 import Footer from 'components/Footer';
@@ -6,45 +6,63 @@ import HeadTags from 'components/Header';
 import NavBar from 'components/NavBar';
 import Headline from 'components/Headline';
 import Paragraph from 'components/Paragraph';
-import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from 'types/interfaces';
+import {
+  MetaInfoProps,
+  ProjectAllTypes,
+  ProjectSectionType,
+} from 'types/interfaces';
 import useDarkMode from 'use-dark-mode';
 import Slider from 'components/Slider';
+import Image from 'next/image'
 import {
-    ProjectFooter,
-    ProjectLayoutContainer,
-    ProjectLayoutCoverImageContainer,
-    ProjectLayoutMainBanner,
-    ProjectLayoutMainBannerContent,
-    ProjectLayoutMainBannerTextContainer,
-    ProjectRoleBanner,
-    ProjectRoleBannerContent,
-    ProjectRoleTextBoxes,
-    ProjectSliderContainer,
-    ProjectSliderContent,
-  } from './styled';
-  import ProjectSection from 'components/ProjectSection';
-import { truncate } from 'fs';
+  ProjectFooter,
+  ProjectLayoutContainer,
+  ProjectLayoutCoverImageContainer,
+  ProjectLayoutMainBanner,
+  ProjectLayoutMainBannerContent,
+  ProjectLayoutMainBannerTextContainer,
+  ProjectRoleBanner,
+  ProjectRoleBannerContent,
+  ProjectRoleTextBoxes,
+  ProjectSliderContainer,
+  ProjectSliderContent,
+} from './styled';
+import ProjectSection from 'components/ProjectSection';
 
-  interface Props {
-    metaInfo: MetaInfoProps;
-    project: ProjectAllTypes;
-  }
-  
-  const ProjectLayout = ({metaInfo, project}: Props) => {
-    const [currentURL, setCurrentURL] = useState<string>('https://kudzaim.codes/');
-    const router = useRouter();
-    const darkmode = useDarkMode();
+interface Props {
+  metaInfo: MetaInfoProps;
+  project: ProjectAllTypes;
+}
 
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        setCurrentURL(
-          `${window.location.protocol}//${window.location.host}${window.location.pathname}`
-        );
-      }
-    }, []);
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+};
 
-    return(
-      <ProjectLayoutContainer>
+const ProjectLayout = ({ metaInfo, project }: Props) => {
+  const [currentURL, setCurrentURL] = useState<string>(
+    'https://kudzaim.codes/'
+  );
+  const router = useRouter();
+  const darkmode = useDarkMode();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentURL(
+        `${window.location.protocol}//${window.location.host}${window.location.pathname}`
+      );
+    }
+  }, []);
+
+  return (
+    <ProjectLayoutContainer
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+      transition={{ type: 'linear' }}
+    >
       <HeadTags
         title={`${project.client}: ${project.headline} • ${metaInfo?.mainTitle}`}
         description={project.headline}
@@ -59,20 +77,25 @@ import { truncate } from 'fs';
           <ProjectLayoutMainBannerTextContainer>
             <Paragraph color={COLOUR.white_cloud} children={project.client} />
             <br />
-            <Headline color={COLOUR.white_cloud} typeHeadline="h5" fontSize={50}>
+            <Headline
+              color={COLOUR.white_cloud}
+              typeHeadline="h5"
+              fontSize={50}
+            >
               {project.headline}
             </Headline>
             <br />
-             { project.projectLink && 
-             <Paragraph
+            {project.projectLink && (
+              <Paragraph
                 color={COLOUR.white_cloud}
                 highlightColor={COLOUR.white_dark}
                 children={`<a href="${project.projectLink}" target="_blank" rel="noopener noreferrer" > View Website > </a>`}
-              />}
-              <br/>
+              />
+            )}
+            <br />
           </ProjectLayoutMainBannerTextContainer>
           <ProjectLayoutCoverImageContainer>
-          <img src={project.coverImage?.url!} alt={project.client} />
+            <img src={project.coverImage?.url!} alt={project.client} />
           </ProjectLayoutCoverImageContainer>
         </ProjectLayoutMainBannerContent>
       </ProjectLayoutMainBanner>
@@ -91,18 +114,21 @@ import { truncate } from 'fs';
 
       <ProjectSliderContainer>
         <ProjectSliderContent>
-          <Slider mainColor={project.mainColor} slides={project?.sliderImages!} />
+          <Slider
+            mainColor={project.mainColor}
+            slides={project?.sliderImages!}
+          />
         </ProjectSliderContent>
       </ProjectSliderContainer>
-          
+
       <ProjectSection
         alignment="mid-up"
         title="Overview"
         content={project.overview}
-        columns={2}
+        columns={1}
         mainColor={project.mainColor}
       />
-      
+
       {project.sections &&
         Object.entries(project.sections)?.map(
           ([key, section]: [string, ProjectSectionType], index: number) => {
@@ -134,16 +160,22 @@ import { truncate } from 'fs';
 
       <ProjectFooter>
         <Paragraph
-          color={`${darkmode.value ? COLOUR.white_dark : COLOUR.blue_universe}55`}
+          color={`${
+            darkmode.value ? COLOUR.white_dark : COLOUR.blue_universe
+          }55`}
           size={0.9}
           children={`© ${
-            project?.firstYear !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
-          }${new Date()?.getFullYear()}.All rights reserved - ${project.client}.`}
+            project?.firstYear !== new Date()?.getFullYear()
+              ? `${project.years?.first} - `
+              : ''
+          }${new Date()?.getFullYear()}.All rights reserved - ${
+            project.client
+          }.`}
         />
       </ProjectFooter>
       <Footer mainColor={project.mainColor} />
     </ProjectLayoutContainer>
-    )
+  );
 };
 
 export default ProjectLayout;

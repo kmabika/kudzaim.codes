@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 interface BannerProps {
@@ -9,7 +10,7 @@ interface CompanyProps {
   oneColorIcon: boolean | undefined;
 }
 
-export const ProjectLayoutContainer = styled.section`
+export const ProjectLayoutContainer = styled(motion.section)`
   background: ${(props) => props.theme.background};
   width: 100%;
 `;

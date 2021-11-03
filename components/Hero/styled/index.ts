@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const HeroBannerWrapper = styled.div`
     padding-top: 50px;
     width: 100%;

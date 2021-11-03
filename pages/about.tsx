@@ -22,7 +22,7 @@ const HomePage = ({ metaInfo, heroTexts, experiences }: Props) => {
       description={metaInfo?.description}
     >
       <HeroBanner heroTexts={heroTexts}/>
-      <ExperienceBanner experiences={experiences} />
+      {/* <ExperienceBanner experiences={experiences} /> */}
       <ProgrammingLanguages />
       <Technologies />
       <Tools />

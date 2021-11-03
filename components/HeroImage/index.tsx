@@ -14,7 +14,50 @@ import {
     heroTexts: HeroBannerType;
   }
   
-  const HeroImage = ({heroTexts}: Props) => {
+
+  const postWhileHover = {
+    position: 'relative',
+    zIndex: 1,
+    background: 'white',
+    scale: [1, 1.4, 1.2],
+    rotate: [0, 10, -10, 0],
+    filter: [
+      'hue-rotate(0) contrast(100%)',
+      'hue-rotate(360deg) contrast(200%)',
+      'hue-rotate(45deg) contrast(300%)',
+      'hue-rotate(0) contrast(100%)'],
+    transition: {
+      duration: .2
+    }
+  }
+  
+  const postVariants = {
+    initial: {
+      opacity: 0,
+      y: 20,
+      scale: .9
+    },
+    enter: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: .4
+      }
+    }
+  };
+
+  const postMotionProps = {
+    initial: 'initial',
+    animate: 'enter',
+    variants: postVariants,
+    hover: postWhileHover,
+  }
+
+  
+
+  
+  const AboutHeroBanner = ({heroTexts}: Props) => {
 
     return(
       <HeroLayoutWrapper>
@@ -33,8 +76,21 @@ import {
             <br/>
             <Paragraph children={heroTexts.secondParagraph} size={0.8}/>
           </HeroLayoutMainBannerTextContainer>
-          <HeroLayoutCoverImageContainer>
-          <img src={'/images/Asset 2.png'} alt="Grad Image Kudzai Mabika" />
+          <HeroLayoutCoverImageContainer 
+          initial='initial'
+          animate="enter"
+          whileHover={{
+          scale: [1, 1.4, 1.2],
+          rotate: [0, 10, -10, 0],
+          filter: [
+            'hue-rotate(0) contrast(100%)',
+            'hue-rotate(360deg) contrast(200%)',
+            'hue-rotate(45deg) contrast(300%)',
+            'hue-rotate(0) contrast(100%)'],
+          transition: {
+            duration: .2
+          }}}>
+          <img src={'/images/grad-image.png'} alt="Grad Image Kudzai Mabika" />
           </HeroLayoutCoverImageContainer>
         </HeroLayoutMainBannerContent>
       </HeroLayoutMainBanner>
@@ -42,4 +98,4 @@ import {
     )
 };
 
-export default HeroImage;
+export default AboutHeroBanner;
