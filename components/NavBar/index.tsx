@@ -135,7 +135,7 @@ const NavBar = ({ bgColor }: HeaderTypes) => {
           >
             <Paragraph
               highlightColor={bgColor}
-              children={`<a href="mailto:kdmab10@gmail.com" title="kdmab10@gmail.com" target="_blank" rel="noopener noreferrer"> kdmab10@gmail.com</a>`}
+              children={`<a href="mailto:kmabika@protonmail.com" title="kmabika@protonmail.com" target="_blank" rel="noopener noreferrer"> kmabika@protonmail.com</a>`}
             />
             <br />
             <br />

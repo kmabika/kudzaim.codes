@@ -40,7 +40,7 @@ const Footer = ({ mainColor = COLOUR.blue_universe }: FooterProps) => {
         <FooterTextContent >
           <Paragraph
             highlightColor={mainColor}
-            children={`<a href="mailto:kdmab10@gmail.com" title="kdmab10@gmail.com" target="_blank" rel="noopener noreferrer">kdmab10@gmail.com</a>`}
+            children={`<a href="mailto:kmabika@protonmail.com" title="kmabika@protonmail.com" target="_blank" rel="noopener noreferrer">kmabika@protonmail.com</a>`}
           />
         <SocialContainer>
             <SocialIcons onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href="https://l.linklyhq.com/l/aU9O" target="_blank" rel="noopener noreferrer">
