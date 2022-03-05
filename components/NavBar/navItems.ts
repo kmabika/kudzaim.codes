@@ -20,26 +20,10 @@ export const NavItems: NavBarItemType[] = [
         scrollToElement('projects');
       },
     },
-    // {
-    //   label: 'Articles',
-    //   type: 'action',
-    //   onClick: () => {
-    //     if (window?.location?.pathname !== '/') {
-    //       Router.push({ pathname: '/', query: { g: 'articles' } });
-    //     }
-    //     scrollToElement('articles');
-    //   },
-    // },
-    {
-      label: 'About',
-      type: 'link',
-      route: '/about',
-      isExternal: false,
-    },
     {
       label: 'Resume',
       type: 'link',
-      route: '/resume/resume.pdf',
+      route: 'https://resume.kudzaim.codes',
       isExternal: true,    },
 
   ];

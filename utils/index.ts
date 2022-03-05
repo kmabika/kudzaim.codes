@@ -52,22 +52,6 @@ export const handleGridRangeProject = (length: number, position: number) => {
     }
   };
 
-export function calculateAge(currentDate = new Date()): number {
-    const birthDate = new Date('1998-09-01')
-  
-    let age = currentDate.getFullYear() - birthDate.getFullYear()
-  
-    if (
-      currentDate.getMonth() < birthDate.getMonth() ||
-      (currentDate.getMonth() === birthDate.getMonth() &&
-        currentDate.getDate() < birthDate.getDate())
-    ) {
-      age = age - 1
-    }
-  
-    return age
-};
-
 export const HandleAlignment = (alignment: string) => {
   const splitAlignment: string[] = alignment.split('-');
   const size: string = splitAlignment[0];

@@ -5,6 +5,7 @@ import {META_INFO, HERO_BANNER_TEXTS} from "assets/content";
 import getAllProjects from 'graphql/getProjects';
 import Hero from "components/Hero";
 import ProjectsBanner from "components/Projects";
+import ExperienceBanner from 'components/ExperienceBanner';
 
 interface Props{
     metaInfo: MetaInfoProps;

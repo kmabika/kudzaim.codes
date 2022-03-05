@@ -1,5 +1,4 @@
 import { MetaInfoProps, HeroBannerType} from "types/interfaces";
-import { calculateAge } from "utils";
 import {ExperienceProps} from 'types/interfaces';
 
 export const META_INFO: MetaInfoProps = {
@@ -12,23 +11,12 @@ export const META_INFO: MetaInfoProps = {
 
 export const HERO_BANNER_TEXTS: HeroBannerType = {
   headline: `Hey there, I'm Kudzai 👋`,
-  paragraph: `A Bachelor of Computer and Information Science Graduate from <a class="external-link" rel="noopener 
-  noreferrer" href="https://www.monash.edu/" target="_blank" title="Monash University">Monash University</a> 
-  currently based in Johannesburg. I freelance specializing in creating interactive experiences and functional dynamic web applications 
-  using React, GraphQL, and TypeScript.`,
+  paragraph: `Hello! My name is Kudzai and I am a very curious and self-driven person with a big passion for web
+  development in general.
+  I graduated with my Bachelor's in Computer & Information Sciences with a concentration in Software
+  Development & Computer Network Security.
+  I'm also an AWS Certified Cloud Practitioner and AWS Certified Developer Associate.`,
 };
-
-export const ABOUT_BANNER_TEXTS:HeroBannerType = {
-  headline: `Hello, I'm Kudzai.`,
-  paragraph: `I'm Kudzai Mabika a ${calculateAge()}-year-old graduate and freelance developer currently living in Johannesburg, South Africa.`,
-  secondHeadline: `Background`,
-  secondParagraph: `I'm an aspiring software engineer who completed my Bachelor 
-  of Computer and Information Science majoring in Software Development and Computer Network 
-  Security at Monash University, South Africa campus in 2020. During my degree, my 
-  interest in developing secure and scalable applications grew through learning software engineering.
-   <br><br>
-   I'm currently seeking intern or junior developer positions.`,
-}
 
 export const EXPERIENCES: ExperienceProps[] = [
   {

@@ -10,9 +10,9 @@ export interface PageLayoutTypes{
 export interface HeadTagProps{
     title: string;
     description: string;
-    image: string;
-    currentUrl: string;
-    locale: string;
+    image?: string;
+    currentUrl?: string;
+    locale?: string;
     mainColor?: string;
 }
 

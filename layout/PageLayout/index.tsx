@@ -16,9 +16,9 @@ const PageLayout = ({
   children,
   description,
   image,
-  title,
+  title
 }: PageLayoutType) => {
-  const [currentURL, setCurrentURL] = useState('https://kmabika.me/');
+  const [currentURL, setCurrentURL] = useState('https://kudzaim.codes/');
   const router = useRouter();
 
   useEffect(() => {
