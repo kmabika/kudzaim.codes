@@ -3,7 +3,7 @@ import { ProjectCardFragment } from "./graphql-fragments";
 
 export const getAllProjectsQuery = gql`
       {
-        projects(first: 1) {
+        projects {
           ...ProjectCardFragment
         }
       }

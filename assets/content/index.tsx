@@ -1,5 +1,4 @@
 import { MetaInfoProps, HeroBannerType} from "types/interfaces";
-import {ExperienceProps} from 'types/interfaces';
 
 export const META_INFO: MetaInfoProps = {
     description:
@@ -15,18 +14,6 @@ export const HERO_BANNER_TEXTS: HeroBannerType = {
   development in general.
   I graduated with my Bachelor's in Computer & Information Sciences with a concentration in Software
   Development & Computer Network Security.
-  I'm also an AWS Certified Cloud Practitioner and AWS Certified Developer Associate.`,
+  I'm also an <a href="https://www.credly.com/badges/3acdc860-6f5d-44ab-886d-66d6100be6db/public_url" target="_blank"  rel="noopener noreferrer">AWS Certified Cloud Practitioner</a> and 
+  <a href="https://www.credly.com/badges/15f60cdb-310f-484d-ad85-1a2a20058ead/public_url" target="_blank"  rel="noopener noreferrer">AWS Certified Developer Associate</a>.`,
 };
-
-export const EXPERIENCES: ExperienceProps[] = [
-  {
-    company: 'Monash South Africa',
-    country: 'Ruimsig, Gauteng.',
-    position: 'Academic Tutor.',
-    description: 'Worked as a tutor for <a href="https://handbook.monash.edu/2020/units/FIT2093" target="_blank"> Cyber Security</a> at Monash University',
-    years: {
-      first: '03/2020',
-      last: '11/2020',
-    },
-  },
-];

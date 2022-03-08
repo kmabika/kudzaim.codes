@@ -121,13 +121,14 @@ const ProjectLayout = ({ metaInfo, project }: Props) => {
         </ProjectSliderContent>
       </ProjectSliderContainer>
 
+    { project.overview &&
       <ProjectSection
         alignment="mid-up"
         title="Overview"
-        content={project.overview}
+        content={project?.overview}
         columns={1}
         mainColor={project.mainColor}
-      />
+      />}
 
       {project.sections &&
         Object.entries(project.sections)?.map(
@@ -166,9 +167,9 @@ const ProjectLayout = ({ metaInfo, project }: Props) => {
           size={0.9}
           children={`© ${
             project?.firstYear !== new Date()?.getFullYear()
-              ? `${project.years?.first} - `
+              ? `${project?.firstYear} - `
               : ''
-          }${new Date()?.getFullYear()}.All rights reserved - ${
+          }${new Date()?.getFullYear()}. All rights reserved - ${
             project.client
           }.`}
         />

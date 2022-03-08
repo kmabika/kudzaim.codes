@@ -53,12 +53,6 @@ const ProjectCard = ({
       >
         <ProjectCardCoverWrapper background={mainColor} gridRange={gridRange}>
           <ProjectCardCoverImage gridRange={gridRange}>
-            {/* <img
-              alt={client}
-              height={gridRange && gridRange[2] === 'big' ? 1091 : 1000}
-              width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
-              src={cardImages[1].url}
-            /> */}
             <Image
                         alt={client}
                         height={gridRange && gridRange[2] === 'big' ? 1091: 1000}

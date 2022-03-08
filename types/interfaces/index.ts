@@ -98,7 +98,6 @@ export interface ProjectMainType{
     slug: string;
     firstYear?: number;
     lastYear?:string;
-    years?: YearsTypes;
     sliderImages?: ImageInterface[];
     smallImages?: ImageInterface[];
 }
@@ -138,10 +137,6 @@ export interface ProjectInternalInfoTypes{
     sections?: SectionsType;
 }
 
-export interface YearsTypes{
-first: string | number;
-    last?: string | number;
-}
 
 export type ProjectAllTypes = ProjectMainType & ProjectInternalInfoTypes;
 
@@ -149,13 +144,7 @@ export interface ProjectsType {
   [key: string]: ProjectAllTypes;
 }
 
-export interface ExperienceProps {
-    country: string;
-    company: string;
-    position: string;
-    description: string;
-    years: YearsTypes;
-}
+
 
 export type Action = 
 {type: 'INITIAL_STATE'} |{type: 'ADD_CURSOR_BORDER'} | {type: 'REMOVE_CURSOR_BORDER'} | {type: 'RESET_CURSOR_COLOR'} | {type: 'LOCK_CURSOR_POSITION', payload: {x : number, y: number}};
